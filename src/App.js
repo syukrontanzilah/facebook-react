@@ -5,10 +5,12 @@ import Sidebar from './Sidebar'
 import Feed from './Feed'
 import Widgets from './Widgets'
 import Rightbar from './Rightbar'
+import Fab from '@material-ui/core/Fab';
+import EditIcon from '@material-ui/icons/Edit';
 
 const App = () => {
   return(
-    <div className="app">
+<div className="app">
 
 {/* HEADER */}
 <Header/>
@@ -25,7 +27,10 @@ const App = () => {
 
 <Rightbar/>
 </div>
+
+
     </div>
+
   )
 }
 

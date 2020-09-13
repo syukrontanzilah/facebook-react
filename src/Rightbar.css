@@ -1,7 +1,7 @@
 .rightbar {
     padding:25px 10px;
     flex: 0.33;
-    background-color: lightblue;
+    /* background-color: lightblue; */
 }
 
 .sponsor > p {
@@ -45,8 +45,13 @@ border-radius: 10px;
     margin-bottom: 10px;
 }
 
+.halaman {
+    margin-bottom: 20px;
+}
+
 .halaman > p {
     color: #474747;
+   
 }
 
 .halaman__list {
@@ -67,3 +72,34 @@ border-radius: 10px;
     color: gray;
     margin-left: 10px;
 }
+
+.halaman__header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.halaman__header > .MuiSvgIcon-root{
+    color: gray;
+    cursor: pointer;
+}
+
+.sub__menu {
+    display: flex;
+    margin-left: 10px;
+    align-items: center;
+    font-size: small;
+    color: gray;
+   padding:5px 10px;
+}
+
+.sub__menu:hover {
+   background-color: lightgray;
+   border-radius: 10px;
+   cursor: pointer;
+}
+.sub__menu > p {
+   margin-left: 10px;
+ }
+
+
+

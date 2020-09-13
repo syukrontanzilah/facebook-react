@@ -12,7 +12,7 @@ import{ ExpandMoreOutlined} from '@material-ui/icons'
 const Sidebar=(props)=> {
     return (
         <div className="sidebar">
-            <SidebarRow src="https://cdn.idntimes.com/content-images/community/2019/10/1570055614033-instasave-b58e06413ecd31b1e0932e6374245076.jpg" title="Azmi Furqon Alaydrus"/>
+            <SidebarRow src="https://cdn.idntimes.com/content-images/community/2019/10/1570055614033-instasave-b58e06413ecd31b1e0932e6374245076.jpg" title="Azmi Furqon"/>
            <SidebarRow 
            title="Covid-19 Information Center"
            Icon ={LocalHospitalIcon}
