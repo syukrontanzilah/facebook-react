@@ -21,7 +21,9 @@ const App = () => {
 
 {/* widget */}
 
-
+<div>
+  <p>widget</p>
+</div>
 </div>
 
 

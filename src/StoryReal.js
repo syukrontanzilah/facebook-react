@@ -30,6 +30,7 @@ function StoryReal() {
            profileSrc="https://i.pinimg.com/originals/b6/1a/b0/b61ab0d6f9701059245fcc02f554fbae.jpg"
            title="Athaya Vitria"
            />
+
         
         </div>
     )

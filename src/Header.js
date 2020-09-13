@@ -63,7 +63,7 @@ function Header() {
                 <ForumIcon />
                 </IconButton>
                 <IconButton>
-                <NotificationsActiveIcon />
+                <NotificationsActiveIcon  />
                 </IconButton>
                 <IconButton>
                 <ExpandMoreIcon />

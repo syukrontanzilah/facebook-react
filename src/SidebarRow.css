@@ -17,9 +17,16 @@ font-weight: 500;
 
 .sidebarRow > p:hover {
    color:#2e81f4;
+   font-weight: 700;
+   margin-left: 18px;
+
     }
 
 .sidebarRow > .MuiSvgIcon-root {
     font-size: x-large;
     color: #2e81f4;
+}
+
+.sidebarRow > .MuiSvgIcon-root:hover {
+ 
 }

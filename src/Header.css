@@ -90,3 +90,9 @@
 .header__info > h4 {
     margin-left: 10px;
 }
+
+@media screen and (max-width: 1200px) {
+    .header__info > h4 {
+        display: none;
+    }
+}
