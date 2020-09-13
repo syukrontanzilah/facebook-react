@@ -3,6 +3,8 @@ import './App.css'
 import Header from './Header'
 import Sidebar from './Sidebar'
 import Feed from './Feed'
+import Widgets from './Widgets'
+import Rightbar from './Rightbar'
 
 const App = () => {
   return(
@@ -21,13 +23,8 @@ const App = () => {
 
 {/* widget */}
 
-<div>
-  <p>widget</p>
+<Rightbar/>
 </div>
-</div>
-
-
-
     </div>
   )
 }

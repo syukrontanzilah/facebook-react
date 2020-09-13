@@ -1,5 +1,5 @@
 .header{
-    padding: 10px 20px ;
+    padding: 5px 20px ;
     display: flex;
     justify-content: space-between;
     position: sticky;
@@ -7,6 +7,7 @@
     z-index: 100;
     top:0;
     box-shadow: 0px 5px 8px -9px rgba(0,0,0,0.75);
+    align-items: center;
 }
 
 .header__left{
@@ -18,13 +19,16 @@
     display: flex;
     align-items: center;
     background-color: #eff2f5;
-    padding:10px 15px;
+    padding:0px 10px;
     margin-left: 10px;
     border-radius: 99px;
+    height: 40px;
+    max-width: 210px;
 }
 
 .header__left > img {
     height: 40px;
+    width: 40px;
 }
 
 .header__input > input {
@@ -32,6 +36,9 @@
     background-color: transparent;
     outline-width: 0;
     margin-left: 5px;
+}
+.search__icon {
+    color: gray;
 }
 
 .search__icon:hover {
@@ -55,10 +62,12 @@
 
 .header__option--active > .MuiSvgIcon-root{
     color: #2e81f4;
+       border-bottom: 3px solid #2e81f4;
 }
 
 .header__option--active {
-    border-bottom: 4px solid #2e81f4;
+ 
+   
 }
 
 .header__option {
@@ -66,6 +75,7 @@
     align-items: center;
     padding: 0 30px ;
     cursor: pointer;
+    margin: 0 5px;
 }
 
 
@@ -73,7 +83,7 @@
     background-color: #eff2f5;
     border-radius: 10px;
     align-items: center;
-    padding: 0 30px;
+    padding: 5px 30px;
     border-bottom: none;
 }
 
@@ -85,6 +95,18 @@
     display: flex;
     align-items: center;
     margin-right: 10px;
+    padding: 0px 5px;
+  
+   
+}
+
+.header__info:hover {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    cursor: pointer;
+    background-color: #eff2f5;
+    border-radius: 30px;
 }
 
 .header__info > h4 {

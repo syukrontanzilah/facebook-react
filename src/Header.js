@@ -53,8 +53,8 @@ function Header() {
 {/* header right */}
                 <div className="header__right">
                 <div className="header__info">
-                <Avatar />
-                <h4 >{name.length < 15 ? `${name}`: `${name.substring(0,15)}...`}</h4>
+                <Avatar style={{width:30, height:30}} src= "https://cdn.idntimes.com/content-images/community/2019/10/1570055614033-instasave-b58e06413ecd31b1e0932e6374245076.jpg" />
+                <h4 >{name.length < 15 ? `${name}`: `${name.substring(0,10)}...`}</h4>
                 </div>
                 <IconButton>
                 <AddIcon />

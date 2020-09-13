@@ -13,6 +13,7 @@ cursor: pointer;
 .sidebarRow > p {
 margin-left: 20px;
 font-weight: 500;
+font-size: small;
 }
 
 .sidebarRow > p:hover {

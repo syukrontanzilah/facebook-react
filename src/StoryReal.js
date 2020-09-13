@@ -18,7 +18,7 @@ function StoryReal() {
             <Story
            image="https://s4.bukalapak.com/img/9182616738/large/Promo_Niqab_Agnia_By_Elmina_Hijab__Cadar_Purdah__Niqob_Hot_P.jpg"
            profileSrc="https://d.newsweek.com/en/full/1534706/file-photo-hijab.jpg"
-           title="Mirza hamidah"
+           title="Mirza hamidah Azka"
            />
             <Story
            image="https://lh3.googleusercontent.com/ohekTBafhHXbanLitgHscItm2pEZeXSwlmBBqwSy5ac07H5wfyliUJ71IPoSONWVBlo"

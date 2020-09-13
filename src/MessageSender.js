@@ -18,7 +18,7 @@ function MessageSender() {
     return (
         <div className="messageSender">
             <div className="messageSender__top">
-            <Avatar/>
+            <Avatar src= "https://cdn.idntimes.com/content-images/community/2019/10/1570055614033-instasave-b58e06413ecd31b1e0932e6374245076.jpg" />
             <form>
                 <input 
                 value={input}
