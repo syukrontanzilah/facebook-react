@@ -1,16 +1,44 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import './Feed.css'
 import StoryReal from './StoryReal'
 import MessageSender from './MessageSender'
 import Post from './Post'
+import db from './firebase'
+
 
 function Feed() {
+    const [posts, setPosts] = useState([])
+
+useEffect(()=>{
+db.collection('posts')
+.orderBy("timestamp", "desc")
+.onSnapshot(snapshot => {
+    setPosts(snapshot.docs.map(doc => ({
+        id: doc.id,
+        data: doc.data()
+    })))
+})
+}, [])
+
     return (
         <div className="feed">
             <StoryReal/>
             <MessageSender/>
 
-            <Post
+            {
+                posts.map(post => (
+                    <Post
+                    key={post.id}
+                    profilePic ={post.data.profilePic}
+                    message={post.data.message}
+                    timestamp={post.data.timestamp}
+                    username = {post.data.username}
+                    image={post.data.image}
+                    />
+                ))
+            }
+
+            {/* <Post
             profilePic= "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRqW_1JBO9VnbZOUoBBJ4NFp0_bnRv7K1zB22OzGxn1Rm5Ls70f4RMzKWNOVPi9UjO7gN9sBXi4DAnnvC1m1N2fdt2LUyCsG2POzA&usqp=CAU&ec=45699844"
             message ="Hallo Assalamualaiku sobat facebook!"
             timestamp="1 menit yang lalu"
@@ -32,7 +60,7 @@ function Feed() {
             timestamp="24 menit yang lalu"
             username= "Zulaikha Tahir"
             image="https://www.picknlearn.net/wp-content/uploads/2019/10/e-learning.jpg"
-            />
+            /> */}
 
 
             {/*  */}

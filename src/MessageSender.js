@@ -5,6 +5,8 @@ import VideoCamIcon from '@material-ui/icons/Videocam'
 import PhotoLibraryIcon from '@material-ui/icons/PhotoLibrary';
 import InsertEmoticonIcon from '@material-ui/icons/InsertEmoticon';
 import { useStateValue } from './StateProvider';
+import db from './firebase';
+import firebase from 'firebase'
 
 
 function MessageSender() {
@@ -12,9 +14,16 @@ function MessageSender() {
     const [input, setInput] = useState('')
     const [imageUrl, setImageUrl]= useState("")
     const handleSubmit = (e) => {
-        console.log(input)
-        console.log(imageUrl)
         e.preventDefault()
+
+db.collection("posts").add({
+    message: input,
+    timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+    profilePic: user.photoURL,
+    username: user.displayName,
+    image: imageUrl,
+})
+
         setInput("");
         setImageUrl("")
     }
@@ -30,7 +39,7 @@ function MessageSender() {
                 value={input}
                 onChange={(e)=> setInput(e.target.value)}
                className="messageSender__input"
-                placeholder="What's on your mind ?"/>
+                placeholder={`What's on your mind ${user.displayName.length < 15 ? `${user.displayName}`: `${user.displayName.substring(0,7)}...`} ?`}/>
                 <input
                 value={imageUrl}
                 onChange={e => setImageUrl(e.target.value)}
