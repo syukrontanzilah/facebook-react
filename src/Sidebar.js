@@ -8,11 +8,17 @@ import ChatIcon from '@material-ui/icons/Chat';
 import StoreFrontIcon from '@material-ui/icons/Storefront'
 import VideoLibraryIcon from '@material-ui/icons/VideoLibrary'
 import{ ExpandMoreOutlined} from '@material-ui/icons'
+import { useStateValue } from './StateProvider';
 
 const Sidebar=(props)=> {
+    const [{user}, dispatch] = useStateValue()
     return (
         <div className="sidebar">
-            <SidebarRow src="https://cdn.idntimes.com/content-images/community/2019/10/1570055614033-instasave-b58e06413ecd31b1e0932e6374245076.jpg" title="Azmi Furqon"/>
+            <SidebarRow 
+            // src="https://cdn.idntimes.com/content-images/community/2019/10/1570055614033-instasave-b58e06413ecd31b1e0932e6374245076.jpg" 
+            src={user.photoURL}
+            
+            title={user.displayName}/>
            <SidebarRow 
            title="Covid-19 Information Center"
            Icon ={LocalHospitalIcon}

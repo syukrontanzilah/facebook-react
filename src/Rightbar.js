@@ -49,7 +49,7 @@ function Rightbar() {
          </div>
          <div className="sub__menu">
             <PublicOutlinedIcon/>
-             <p>Make Promotion</p>
+             <p>Make Promotion!</p>
          </div>
            
 

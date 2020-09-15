@@ -11,10 +11,12 @@ import AddIcon from '@material-ui/icons/Add'
 import ForumIcon from '@material-ui/icons/Forum';
 import NotificationsActiveIcon from '@material-ui/icons/NotificationsActive';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import { useStateValue } from './StateProvider';
 
-let name ="Azmi Furqon Alaydrus"
+// let name ="Azmi Furqon Alaydrus"
 
 function Header() {
+    const [{user}, dispatch] = useStateValue()
     return (
         <div className="header">
 {/* header left */}
@@ -53,8 +55,15 @@ function Header() {
 {/* header right */}
                 <div className="header__right">
                 <div className="header__info">
-                <Avatar style={{width:30, height:30}} src= "https://cdn.idntimes.com/content-images/community/2019/10/1570055614033-instasave-b58e06413ecd31b1e0932e6374245076.jpg" />
-                <h4 >{name.length < 15 ? `${name}`: `${name.substring(0,10)}...`}</h4>
+                <Avatar style={{width:30, height:30}} 
+
+                // src= "https://cdn.idntimes.com/content-images/community/2019/10/1570055614033-instasave-b58e06413ecd31b1e0932e6374245076.jpg"
+                src={user.photoURL}
+                
+                />
+                {/* <h4 >{name.length < 15 ? `${name}`: `${name.substring(0,10)}...`}</h4> */}
+    <h4>{user.displayName.length < 15 ? `${user.displayName}`: `${user.displayName.substring(0,7)}...`}</h4>
+                
                 </div>
                 <IconButton>
                 <AddIcon />

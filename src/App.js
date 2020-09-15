@@ -7,27 +7,26 @@ import Widgets from './Widgets'
 import Rightbar from './Rightbar'
 import Fab from '@material-ui/core/Fab';
 import EditIcon from '@material-ui/icons/Edit';
+import Login from './Login'
+import { useStateValue } from './StateProvider'
 
 const App = () => {
+  const [{user}, dispatch] = useStateValue()
   return(
 <div className="app">
-
-{/* HEADER */}
+  {!user ? (
+<Login/>
+  ): (
+    <>
 <Header/>
-{/* app body */}
 <div className="app__body">
-
-  
-{/* sidebar */}
 <Sidebar/>
-{/* feed */}
 <Feed/>
-
-{/* widget */}
-
 <Rightbar/>
 </div>
-
+</>
+  )
+  }
 
     </div>
 
